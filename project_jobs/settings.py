@@ -117,3 +117,7 @@ STATIC_URL = '/static/'
 
 # crispy forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# login
+LOGIN_REDIRECT_URL = 'list_of_jobs'
+LOGIN_URL = 'login'
