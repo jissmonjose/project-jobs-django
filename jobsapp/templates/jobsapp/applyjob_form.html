@@ -1,0 +1,28 @@
+{% extends 'jobsapp/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <section id="apply_sec">
+        <div class="card">
+            <div class="card-body">
+
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <h2 class="text-secondary border-bottom">
+                            Apply Here
+                        </h2>
+                        {{form|crispy}}
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Submit
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

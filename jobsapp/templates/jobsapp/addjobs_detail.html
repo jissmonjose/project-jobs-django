@@ -1,0 +1,54 @@
+{% extends 'jobsapp/base.html' %}
+
+
+{% block content %}
+    <section id="job-detail-sec">
+        <div class="container">
+            <div class="row-md-6">
+                <div class="col-md-6">
+        <ul class="list-group list-group-flush mt-5">
+        <h3 class="text-info">Job Description</h3>
+                <li class="list-group-item text-secondary">
+                   Job Title:
+                  <span class="float-right">{{jobs_detail.job_title}}</span>
+                </li>
+                <li class="list-group-item text-secondary">
+                   Company:
+                  <span class="float-right">{{jobs_detail.company}}</span>
+                </li>
+                <li class="list-group-item text-secondary">
+                   Skills:
+                  <span class="float-right">{{jobs_detail.skills_required}}</span>
+                </li>
+                <li class="list-group-item text-secondary">
+                   Education:
+                  <span class="float-right">{{jobs_detail.education}}
+                  </span>
+                </li>
+                <li class="list-group-item text-secondary">
+                   Experience needed:
+                  <span class="float-right">{{jobs_detail.experience}}
+                  </span>
+                </li>
+                <li class="list-group-item text-secondary">
+                   Employment Type:
+                  <span class="float-right">{{jobs_detail.employment_type}}
+                  </span>
+                </li>
+                <li class="list-group-item text-secondary">
+                   Location:
+                  <span class="float-right">{{jobs_detail.location}}
+                  </span>
+                </li>
+              </ul>
+           <div class="pt-4 float-right">
+                    <a href="{% url 'apply_to_job' jobs_detail.pk %}" class="btn btn-outline-success px-4">Save</a>
+                    <a href="#" class="btn btn-primary px-4 ml-2">Apply</a>
+            </div>
+                    </div>
+            </div>
+                </div>
+
+
+    </section>
+{% endblock  %}

@@ -1,0 +1,37 @@
+{% extends 'jobsapp/base.html' %}
+
+
+{% block content %}
+
+    <section id="jobs-boxes" class="p-5">
+        <div class="container">
+            
+                <div class="row mb-4">
+                    {% for each_jobs in jobs %}
+                        <div class="col-md-4">
+                    
+                        <div class="card bg-light text-dark text-center mb-3">
+                            <div class="card-body">
+                                <h3><a href="{% url 'details_of_job' each_jobs.pk %}">{{each_jobs.job_title}}</a></h3>
+                                <p>{{each_jobs.company}}</p>
+                                <p class="text-muted">
+                                    {{each_jobs.location}}
+                                </p>
+
+                            </div>        
+                    
+                        
+
+                    </div>
+                </div>
+                {% endfor %}
+
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+{% endblock %}
